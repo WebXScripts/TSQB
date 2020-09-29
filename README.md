@@ -1,0 +1,2 @@
+# TSQB
+TeamSpeak Query Bot
