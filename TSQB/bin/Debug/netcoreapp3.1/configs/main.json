@@ -1,9 +1,0 @@
-﻿{
-  "IP": "127.0.0.1",
-  "QueryLogin": "serveradmin",
-  "QueryNickname": "TSQB # 1.0",
-  "QueryPassword": "NL1HWdKh",
-  "QueryPort": 10011,
-  "ServerID": 1,
-  "OnClientJoin": ["Test", "Test2"]
-}

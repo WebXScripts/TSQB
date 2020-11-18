@@ -1,28 +1,33 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TeamSpeak3QueryApi.Net.Specialized;
-using TSQB.Modules;
+using NLog;
 
 namespace TSQB
 {
-    internal class Core
+    internal class Core : IDisposable
     {
-        private static TeamSpeakClient TsClient;
+
+        private static readonly ILogger Logger = LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
         
-        static async Task Main()
+        public static async Task Main()
         {
-            Console.Title = "TSQB 1.0";
-            TsClient = await BotModule.InitBot();
-            EventsModule.EventHandler(TsClient);
-            Console.WriteLine("Press any key to stop.");
+            var core = new Core();
+            AppDomain.CurrentDomain.UnhandledException += core.ExceptionHandler;
+            await BotLoader.InitBot();
             while (!Console.KeyAvailable) await Task.Delay(TimeSpan.FromSeconds(0.1));
         }
-
-        public static void Dispose()
+        
+        private void ExceptionHandler(object sender, UnhandledExceptionEventArgs e)
         {
-            Console.WriteLine("TSQB is shutting down...");
-            TsClient.Dispose();
-            Environment.Exit(0);
+            Logger.Fatal("Unhandled exception detected.");
+            Logger.Fatal("Report this on: github.com/webxscripts/TeamSpeakCSharpBot");
+            Dispose();
+        }
+
+        public void Dispose()
+        {
+            Console.WriteLine("TSQB is shutting down!");
+            Environment.Exit(-1);
         }
     }
 }
