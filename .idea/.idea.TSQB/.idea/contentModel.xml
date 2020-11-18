@@ -10,6 +10,8 @@
         <e p="BotLoader.cs" t="Include" />
         <e p="Core.cs" t="Include" />
         <e p="Events" t="Include">
+          <e p="ClientChannelChanged.cs" t="Include" />
+          <e p="ClientJoin.cs" t="Include" />
           <e p="EventsManager.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -24,6 +26,7 @@
           </e>
         </e>
         <e p="TSQB.csproj" t="IncludeRecursive" />
+        <e p="TSQB.csproj.DotSettings" t="Include" />
       </e>
       <e p="TSQB.sln" t="IncludeFlat" />
     </e>

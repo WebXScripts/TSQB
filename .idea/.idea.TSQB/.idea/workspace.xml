@@ -23,21 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43297c2b-e401-45eb-ba53-1761f13763a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TSQB/BotLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TSQB/nlog.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TSQB/Events/ClientChannelChanged.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TSQB/Events/ClientJoin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TSQB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TSQB/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TSQB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TSQB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/BotLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/BotLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSQB/Core.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/Core.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/Functions/onClientJoin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/Modules/BotModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/Modules/CommandsModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/Modules/ConfigModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/Modules/EventsModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/Events/EventsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/Events/EventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/Events/EventsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/Models/ConnectionConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/Models/ConnectionConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/TSQB.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/configs/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/configs/connection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/configs/connection.json" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/configs/connection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +53,15 @@
     <setting file="file://$USER_HOME$/RiderProjects/xyzBOT/xyzBOT/TeamSpeak/TSConstructor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Projects/TeamSpeakCSharpBot/TeamSpeakCSharpBot/Init.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/RiderProjects/ConsoleApp5/ConsoleApp5/Loader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Caly projekt/XFQuery-BETA/Functions/OnClientMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/yes/XFQuery/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Caly projekt/XFQuery-BETA/Functions/OnChannelMove.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Caly projekt/XFQuery-BETA/Functions/OnInterval.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/RiderProjects/XFQuery/Core.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/RiderProjects/xyzBOT/xyzBOT/Setup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TSQB/Core.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Projects/TeamSpeakCSharpBot/TeamSpeakCSharpBot/Events/EventsManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/RiderProjects/XFQuery/Core.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Projects/TeamSpeakCSharpBot/TeamSpeakCSharpBot/Events/OnClientEnter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Projects/TeamSpeakCSharpBot/TeamSpeakCSharpBot/Core.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -67,12 +74,20 @@
         <option value="$PROJECT_DIR$/TSQB/Modules/BotLoader.cs" />
         <option value="$PROJECT_DIR$/TSQB/Events/EventsModule.cs" />
         <option value="$PROJECT_DIR$/TSQB/Events/ConfigModule.cs" />
-        <option value="$PROJECT_DIR$/TSQB/Events/EventsManager.cs" />
         <option value="$PROJECT_DIR$/TSQB/Resources/nlog.config" />
         <option value="$PROJECT_DIR$/TSQB/TSQB.csproj" />
         <option value="$PROJECT_DIR$/TSQB/nlog.config" />
+        <option value="$PROJECT_DIR$/TSQB/Properties/AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/TSQB/Models/ConnectionConfig.cs" />
+        <option value="$PROJECT_DIR$/TSQB/bin/Debug/netcoreapp3.1/configs/connection.json" />
+        <option value="$PROJECT_DIR$/TSQB/obj/Debug/netcoreapp3.1/TSQB.AssemblyInfo.cs" />
         <option value="$PROJECT_DIR$/TSQB/Core.cs" />
         <option value="$PROJECT_DIR$/TSQB/BotLoader.cs" />
+        <option value="$PROJECT_DIR$/TSQB/Events/ClientJoin.cs" />
+        <option value="$PROJECT_DIR$/TSQB/Events/ClientChannel.cs" />
+        <option value="$PROJECT_DIR$/TSQB/Events/ClientMoved.cs" />
+        <option value="$PROJECT_DIR$/TSQB/Events/EventsManager.cs" />
+        <option value="$PROJECT_DIR$/TSQB/Events/ClientChannelChanged.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +136,9 @@
       <option name="presentableId" value="Default" />
       <updated>1605628204458</updated>
       <workItem from="1605628226084" duration="2532000" />
-      <workItem from="1605639110270" duration="8561000" />
+      <workItem from="1605639110270" duration="22829000" />
+      <workItem from="1605718347009" duration="3583000" />
+      <workItem from="1605727729643" duration="9169000" />
     </task>
     <servers />
   </component>
@@ -140,6 +157,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -153,33 +171,41 @@
       <screen x="0" y="0" width="1287" height="768" />
     </state>
     <state x="510" y="133" key="EnvironmentVariablesDialog/0.0.1287.768@0.0.1287.768" timestamp="1605642583592" />
-    <state width="1244" height="226" key="GridCell.Tab.0.bottom" timestamp="1605687362254">
+    <state width="1244" height="119" key="GridCell.Tab.0.bottom" timestamp="1605736679794">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
-    <state width="1244" height="226" key="GridCell.Tab.0.bottom/0.0.1287.768@0.0.1287.768" timestamp="1605687362254" />
-    <state width="1244" height="226" key="GridCell.Tab.0.center" timestamp="1605687362254">
+    <state width="1244" height="119" key="GridCell.Tab.0.bottom/0.0.1287.768@0.0.1287.768" timestamp="1605736679794" />
+    <state width="1244" height="119" key="GridCell.Tab.0.center" timestamp="1605736679794">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
-    <state width="1244" height="226" key="GridCell.Tab.0.center/0.0.1287.768@0.0.1287.768" timestamp="1605687362254" />
-    <state width="1244" height="226" key="GridCell.Tab.0.left" timestamp="1605687362254">
+    <state width="1244" height="119" key="GridCell.Tab.0.center/0.0.1287.768@0.0.1287.768" timestamp="1605736679794" />
+    <state width="1244" height="119" key="GridCell.Tab.0.left" timestamp="1605736679794">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
-    <state width="1244" height="226" key="GridCell.Tab.0.left/0.0.1287.768@0.0.1287.768" timestamp="1605687362254" />
-    <state width="1244" height="226" key="GridCell.Tab.0.right" timestamp="1605687362254">
+    <state width="1244" height="119" key="GridCell.Tab.0.left/0.0.1287.768@0.0.1287.768" timestamp="1605736679794" />
+    <state width="1244" height="119" key="GridCell.Tab.0.right" timestamp="1605736679794">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
-    <state width="1244" height="226" key="GridCell.Tab.0.right/0.0.1287.768@0.0.1287.768" timestamp="1605687362254" />
+    <state width="1244" height="119" key="GridCell.Tab.0.right/0.0.1287.768@0.0.1287.768" timestamp="1605736679794" />
     <state x="457" y="66" key="RiderGenerateDialog" timestamp="1605629136876">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
     <state x="457" y="66" key="RiderGenerateDialog/0.0.1287.768@0.0.1287.768" timestamp="1605629136876" />
-    <state x="92" y="92" width="1103" height="584" key="VCS.FileHistoryDialog" timestamp="1605641328696">
+    <state x="92" y="92" width="1103" height="584" key="VCS.FileHistoryDialog" timestamp="1605705248100">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
-    <state x="92" y="92" width="1103" height="584" key="VCS.FileHistoryDialog/0.0.1287.768@0.0.1287.768" timestamp="1605641328696" />
+    <state x="92" y="92" width="1103" height="584" key="VCS.FileHistoryDialog/0.0.1287.768@0.0.1287.768" timestamp="1605705248100" />
     <state x="461" y="297" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605640977287">
       <screen x="0" y="0" width="1287" height="768" />
     </state>
     <state x="461" y="297" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1287.768@0.0.1287.768" timestamp="1605640977287" />
+    <state x="300" y="172" key="run.anything.popup" timestamp="1605696341135">
+      <screen x="0" y="0" width="1287" height="768" />
+    </state>
+    <state x="300" y="172" key="run.anything.popup/0.0.1287.768@0.0.1287.768" timestamp="1605696341135" />
+    <state x="306" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1605734052860">
+      <screen x="0" y="0" width="1287" height="768" />
+    </state>
+    <state x="306" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1287.768@0.0.1287.768" timestamp="1605734052860" />
   </component>
 </project>

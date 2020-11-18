@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using NLog;
 
@@ -14,19 +16,18 @@ namespace TSQB
             var core = new Core();
             AppDomain.CurrentDomain.UnhandledException += core.ExceptionHandler;
             await BotLoader.InitBot();
-            while (!Console.KeyAvailable) await Task.Delay(TimeSpan.FromSeconds(0.1));
         }
         
         private void ExceptionHandler(object sender, UnhandledExceptionEventArgs e)
         {
-            Logger.Fatal("Unhandled exception detected.");
+            Logger.Fatal(e.ExceptionObject as Exception, "Unhandled exception detected.");
             Logger.Fatal("Report this on: github.com/webxscripts/TeamSpeakCSharpBot");
             Dispose();
         }
 
         public void Dispose()
         {
-            Console.WriteLine("TSQB is shutting down!");
+            Logger.Info("TSQB is shutting down!");
             Environment.Exit(-1);
         }
     }
