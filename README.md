@@ -1,2 +1,2 @@
 # TSQB
-TeamSpeak Query Bot
+Work in progress
