@@ -7,7 +7,7 @@ TSQB is my amateur project to create a fully asynchronous bot for TeamSpeak3 ser
 
   - Support for TeamSpeak events
   - Fast and safe
-  - Mutli-platform (.net core)
+  - Multi-platform (.net core)
  
 
 ### Tech
