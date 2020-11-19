@@ -19,7 +19,7 @@ namespace TSQB
 
         private static TeamSpeakClient _tsClient;
         private static readonly ConnectionConfig Config = JsonConvert.DeserializeObject<ConnectionConfig>
-            (File.ReadAllText(Path.GetFullPath(@"configs/connection.json")));
+            (File.ReadAllText(Path.GetFullPath(@"Configs/Connection.json")));
         private static readonly ILogger Logger = LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
         private static readonly string Version = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly() .Location).FileVersion;
 

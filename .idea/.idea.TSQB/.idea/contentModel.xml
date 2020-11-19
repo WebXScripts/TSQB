@@ -8,6 +8,9 @@
       <e p="TSQB" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BotLoader.cs" t="Include" />
+        <e p="Configs" t="Include">
+          <e p="Connection.json" t="Include" />
+        </e>
         <e p="Core.cs" t="Include" />
         <e p="Events" t="Include">
           <e p="ClientChannelChanged.cs" t="Include" />
