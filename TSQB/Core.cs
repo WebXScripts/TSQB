@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using CommandLine;
 using NLog;
@@ -10,7 +11,6 @@ namespace TSQB
     {
 
         private static readonly ILogger Logger = LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
-        
         public static async Task Main(string[] args)
         {
             var core = new Core();
@@ -21,6 +21,7 @@ namespace TSQB
                     core.Dispose();
                 });
             AppDomain.CurrentDomain.UnhandledException += core.ExceptionHandler;
+            Console.CancelKeyPress += core.CancelHandler;
             await BotLoader.InitBot(config.Value);
         }
         
@@ -29,6 +30,15 @@ namespace TSQB
             Logger.Fatal(e.ExceptionObject as Exception, "Unhandled exception detected.");
             Logger.Fatal("Report this on: github.com/webxscripts/TeamSpeakCSharpBot");
             Dispose();
+        }
+        
+        private void CancelHandler(object sender, ConsoleCancelEventArgs e)
+        {
+            if (e.SpecialKey == ConsoleSpecialKey.ControlC)
+            {
+                Logger.Info("Ctrl+C detected, exiting.");
+                Dispose();
+            }
         }
 
         public void Dispose()
