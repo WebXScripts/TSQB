@@ -33,7 +33,7 @@ namespace TSQB.Events
             var totalMsPassed = (endTime - startTime).TotalMilliseconds;
             var cpuUsageTotal = cpuUsedMs / (Environment.ProcessorCount * totalMsPassed);
             var result = cpuUsageTotal * 100;
-            await tsClient.SendMessage($"CPU USAGE: {result.ToString()}", MessageTarget.Private, client.Id);
+            await tsClient.SendMessage($"CPU USAGE: {result.ToString(CultureInfo.CurrentCulture)}", MessageTarget.Private, client.Id);
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading;
 using System.Threading.Tasks;
+using CommandLine;
 using NLog;
+using TSQB.Models;
 
 namespace TSQB
 {
@@ -11,11 +11,17 @@ namespace TSQB
 
         private static readonly ILogger Logger = LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
         
-        public static async Task Main()
+        public static async Task Main(string[] args)
         {
             var core = new Core();
+            var config = Parser.Default.ParseArguments<ConnectionConfig>(args).WithNotParsed(
+                x =>
+                {
+                    Logger.Error("Some params are missing!");
+                    core.Dispose();
+                });
             AppDomain.CurrentDomain.UnhandledException += core.ExceptionHandler;
-            await BotLoader.InitBot();
+            await BotLoader.InitBot(config.Value);
         }
         
         private void ExceptionHandler(object sender, UnhandledExceptionEventArgs e)

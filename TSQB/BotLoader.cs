@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using NLog;
 using TeamSpeak3QueryApi.Net.Specialized;
 using TSQB.Events;
@@ -15,8 +13,6 @@ namespace TSQB
     {
 
         private static TeamSpeakClient _tsClient;
-        private static readonly ConnectionConfig Config = JsonConvert.DeserializeObject<ConnectionConfig>
-            (File.ReadAllText(Path.GetFullPath(@"Configs/Connection.json")));
         private static readonly ILogger Logger = LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();
         private static readonly string Version = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly() .Location).FileVersion;
 
@@ -29,17 +25,17 @@ namespace TSQB
             Logger.Info( "Have a nice day!");
         }
         
-        public static async Task InitBot()
+        public static async Task InitBot(ConnectionConfig config)
         {
             Header();
             Logger.Warn("Loading TSQB...");
-            _tsClient = new TeamSpeakClient(Config.Ip, Config.QueryPort);
+            _tsClient = new TeamSpeakClient(config.Ip, config.QueryPort);
             try
             {
                 await _tsClient.Connect();
-                await _tsClient.Login(Config.QueryLogin, Config.QueryPassword);
-                await _tsClient.UseServer(Config.ServerId);
-                await _tsClient.ChangeNickName(Config.QueryNickname);
+                await _tsClient.Login(config.QueryLogin, config.QueryPassword);
+                await _tsClient.UseServer(config.ServerId);
+                await _tsClient.ChangeNickName(config.QueryNickname);
                 await _tsClient.RegisterServerNotification();
                 await _tsClient.RegisterTextPrivateNotification();
                 await _tsClient.RegisterChannelNotification(0);
