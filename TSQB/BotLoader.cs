@@ -2,12 +2,9 @@
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using NLog;
-using NLog.Fluent;
-using TeamSpeak3QueryApi.Net;
 using TeamSpeak3QueryApi.Net.Specialized;
 using TSQB.Events;
 using TSQB.Models;
@@ -64,7 +61,7 @@ namespace TSQB
                 while (true)
                 {
                     await _tsClient.WhoAmI();
-                    await Task.Delay(30000);
+                    await Task.Delay(180000);
                 }
             });
         }

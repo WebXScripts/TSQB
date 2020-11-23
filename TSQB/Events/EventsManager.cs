@@ -15,10 +15,8 @@ namespace TSQB.Events
         {
             try
             {
-                await Task.WhenAll(
-                    OnClientJoin(tsClient),
-                    OnClientMoved(tsClient)
-                );
+                await OnClientJoin(tsClient);
+                await OnClientMoved(tsClient);
             }
             catch (Exception e)
             {
@@ -28,13 +26,14 @@ namespace TSQB.Events
 
         private static async Task OnClientJoin(TeamSpeakClient tsClient)
         {
+            var functions = ClientJoin.AvailableFunctions;
             Logger.Info("OnClientJoin event loaded!");
             tsClient.Subscribe<ClientEnterView>(data => 
                 data.ForEach(client =>
                     {
                         if (client != null)
                         {
-                            ClientJoin.AvailableFunctions.ForEach(async func =>
+                            functions.ForEach(async func =>
                             {
                                 await func(tsClient, client);
                             });
@@ -45,13 +44,14 @@ namespace TSQB.Events
         
         private static async Task OnClientMoved(TeamSpeakClient tsClient)
         {
+            var functions = ClientChannelChanged.AvailableFunctions;
             Logger.Info("OnClientMoved event loaded!");
             tsClient.Subscribe<ClientMoved>(data => 
                 data.ForEach(client =>
                     {
                         if (client != null)
                         {
-                            ClientChannelChanged.AvailableFunctions.ForEach(async func =>
+                            functions.ForEach(async func =>
                             {
                                 await func(tsClient, client);
                             });
@@ -59,7 +59,7 @@ namespace TSQB.Events
                     }
                 ));
         }
-
+        
         private static void ForEach<T>(this IEnumerable<T> collection, Action<T> action)
         {
             if (action == null) throw new ArgumentNullException(nameof(action));
