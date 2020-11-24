@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using NLog;
 using TeamSpeak3QueryApi.Net.Specialized;
+using TSQB.Commands;
 using TSQB.Events;
 using TSQB.Models;
 
@@ -40,6 +41,7 @@ namespace TSQB
                 await _tsClient.RegisterTextPrivateNotification();
                 await _tsClient.RegisterChannelNotification(0);
                 await EventsManager.HandleEvents(_tsClient);
+                await CommandsManager.HandleCommands(_tsClient);
                 Logger.Info("Welcome abort captain, all systems online.");
                 await KeepAlive();
             }

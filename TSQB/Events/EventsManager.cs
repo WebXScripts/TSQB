@@ -27,7 +27,7 @@ namespace TSQB.Events
         private static async Task OnClientJoin(TeamSpeakClient tsClient)
         {
             var functions = ClientJoin.AvailableFunctions;
-            Logger.Info("OnClientJoin event loaded!");
+            Logger.Info("OnClientJoin event has been loaded!");
             tsClient.Subscribe<ClientEnterView>(data => 
                 data.ForEach(client =>
                     {
@@ -45,7 +45,7 @@ namespace TSQB.Events
         private static async Task OnClientMoved(TeamSpeakClient tsClient)
         {
             var functions = ClientChannelChanged.AvailableFunctions;
-            Logger.Info("OnClientMoved event loaded!");
+            Logger.Info("OnClientMoved event has been loaded!");
             tsClient.Subscribe<ClientMoved>(data => 
                 data.ForEach(client =>
                     {
